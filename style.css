@@ -29,7 +29,7 @@ a {
     font-size: 32px;
 }
 
-p a {
+p a , figcaption a {
     font-size: inherit;
 }
 
