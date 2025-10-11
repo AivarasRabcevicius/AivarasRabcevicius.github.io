@@ -9,95 +9,137 @@ html {
     border-right: 4px solid #B64D00;
     padding: 3px;
 }
+
 #last {
     border-right: none;
 }
+
 h1 {
     font-family: impact, fantasy;
-    font-size: xx-large;
     font-weight: bolder;
+    font-size: 64px;
 }
+
+h2 {
+    font-size: 32px;
+}
+
 a {
     color: inherit;
+    font-size: 32px;
 }
+
+p a {
+    font-size: inherit;
+}
+
 a:hover {
     color: darkorange;
 }
+
 input {
     margin: 5px;
     width: 100px;
 }
 
 article {
+    justify-content: center;
+    width: fit-content;
     align-items: stretch;
-    display:flex;
+    display: flex;
     border: 2px solid;
     border-radius: 15px;
     border-color: #B64D00;
     margin: 10px;
-    padding: 5px;
+    padding: 15px;
     background: linear-gradient(rgba(0, 0, 0, 0.7));
-    
 }
+
 .harticles {
+    display: flex;
     flex-direction: row;
     padding: 0;
 
 }
+
 .varticles {
     flex-direction: column;
     align-content: center;
 }
+
 .gallery {
+    display: flex;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
 }
-figure{
+
+.gallery figure {
+    width: 90%;
+}
+
+figure {
     width: 500px;
 }
+
 #content {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: center !important;
+    justify-content: center !important;
 }
+
 footer {
-    font-family: cursive , sans-serif;
-    text-size-adjust: 50%;
+    display: flex;
+    justify-content: center;
+    font-family: cursive, sans-serif;
 }
+
 img {
-    max-height: 100%;
     max-width: 100%;
 }
+
 table {
- width: 100%;
- object-fit: contain;
+    width: 100%;
+    object-fit: contain;
+    border-collapse: collapse;
 }
+
 th {
     object-fit: contain;
     width: 20%;
     height: 200px;
-    border: 2px solid #B64D00;
-    border-radius: 15px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7));
+    border-bottom: 2px solid #B64D00;
+
 }
+
+th img {
+    padding-top: 0;
+}
+
+.thlast {
+    border-bottom: none;
+}
+
 .doublewide {
     width: 40%;
 }
 
-body{
+body {
     height: inherit;
     position: inherit;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    color: orangered;
+    color: white;
     text-align: center;
     margin: 0;
     height: inherit;
 
 }
+
 main {
     position: sticky;
     height: 1000vh;
@@ -107,23 +149,29 @@ main {
     background-attachment: fixed;
     padding-right: 10px;
 }
+
 aside {
     position: sticky;
     width: 25%;
     height: 1000vh;
-    background: linear-gradient(rgba(40, 21, 9, 1));;
+    background: linear-gradient(rgba(40, 21, 9, 1));
+    ;
     border-left: 10px solid #d29060;
 }
+
 .menu {
     margin-top: 100px;
     font-weight: bold;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     flex-wrap: nowrap;
 }
+
 .menu a {
     width: 100%;
-    background-color:linear-gradient(rgb(69, 32, 9));;;
+    background-color: linear-gradient(rgb(69, 32, 9));
+    ;
+    ;
     border-top: 2px solid #d29060;
     border-bottom: 2px solid #d29060;
     margin-top: 10px;
@@ -131,36 +179,66 @@ aside {
     padding-bottom: 2px;
     text-decoration: none;
 }
-.menu a:hover , .menu a:active {
-    background-color:  rgb(125, 87, 11);;
+
+.menu a:hover,
+.menu a:active {
+    background-color: rgb(125, 87, 11);
+    ;
     color: rgb(185, 178, 165) !important;
 }
-.menu a:visited , .menu a:link {
+
+.menu a:visited,
+.menu a:link {
     color: inherit;
 }
+
 li {
     border-bottom: 2px solid #d29060;
 }
+
 li p {
     text-align: left;
 }
+
 .def:hover {
     color: #007fb6 !important;
 }
 
-
-/* #contentgrid {
-    display: grid;
-    place-items: stretch;
-    grid-template-columns: repeat(5, 500px);
-    grid-template-rows: repeat(3, 500px); */
-
-
-/* .griditem {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+header {
+    display: flex;
+    justify-content: center;
 }
-.griditemdouble {
-    span: 2;
-} */
+
+p {
+    font-size: x-large;
+}
+
+option {
+    font-size: x-large;
+}
+
+select {
+    font-size: x-large;
+    width: 50%;
+}
+
+input {
+    align-self: center;
+    font-size: x-large;
+}
+
+.apie {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.apie p {
+    width: 50%;
+}
+
+.imgfit3 {
+    width: 50%;
+    align-self: center;
+}
