@@ -70,14 +70,26 @@ article {
 .gallery {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 }
 
 .gallery figure {
-    width: 90%;
+    width: fit-content;
 }
+
+.gallery img {
+    width: 200px;
+}
+
+.gallery img:hover {
+    max-height: 100vh ;
+    max-width: 100vh;
+    width: unset;
+}
+
 
 figure {
     width: 500px;
@@ -236,9 +248,18 @@ input {
 
 .apie p {
     width: 50%;
+    text-align: right;
 }
 
 .imgfit3 {
     width: 50%;
     align-self: center;
+}
+.text {
+    width: 50%;
+    height: fit-content;
+}
+
+#tamamo {
+    width: 50%;
 }
