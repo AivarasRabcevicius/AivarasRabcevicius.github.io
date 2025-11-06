@@ -14,6 +14,15 @@ html {
     border-right: none;
 }
 
+.contain {
+    object-fit: contain;
+    width: 20%;
+    align-self: flex-start;
+}
+
+/* .top {
+    align-items: flex-start;
+} */
 h1 {
     font-family: impact, fantasy;
     font-weight: bolder;
@@ -27,10 +36,6 @@ h2 {
 a {
     color: inherit;
     font-size: 32px;
-}
-
-p a , figcaption a {
-    font-size: inherit;
 }
 
 a:hover {
@@ -59,7 +64,15 @@ article {
     display: flex;
     flex-direction: row;
     padding: 0;
+}
 
+.twenty {
+    width: 20%;
+}
+
+.forty {
+    width: 40%;
+    margin-top: 0;
 }
 
 .varticles {
@@ -69,31 +82,28 @@ article {
 
 .gallery {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 }
 
-.gallery figure {
+figure {
     width: fit-content;
+    margin: 5px;
+    padding: 0;
 }
 
 .gallery img {
-    width: 200px;
+    width: 300px;
 }
 
-.gallery img:hover {
+/* .gallery img:hover {
     max-height: 100vh ;
     max-width: 100vh;
     width: unset;
-}
-
-
-figure {
-    width: 500px;
-}
+} */
 
 #content {
     display: flex;
@@ -124,11 +134,8 @@ th {
     width: 20%;
     height: 200px;
     border-bottom: 2px solid #B64D00;
-
-}
-
-th img {
-    padding-top: 0;
+    vertical-align: top;
+    padding-top: 10px;
 }
 
 .thlast {
@@ -167,7 +174,6 @@ aside {
     width: 25%;
     height: 1000vh;
     background: linear-gradient(rgba(40, 21, 9, 1));
-    ;
     border-left: 10px solid #d29060;
 }
 
@@ -196,7 +202,7 @@ aside {
 .menu a:active {
     background-color: rgb(125, 87, 11);
     ;
-    color: rgb(185, 178, 165) !important;
+    color: rgb(185, 178, 165);
 }
 
 .menu a:visited,
@@ -225,6 +231,11 @@ p {
     font-size: x-large;
 }
 
+p a,
+figcaption a {
+    font-size: inherit;
+}
+
 option {
     font-size: x-large;
 }
@@ -249,12 +260,14 @@ input {
 .apie p {
     width: 50%;
     text-align: right;
+    padding-right: 5px;
 }
 
 .imgfit3 {
     width: 50%;
     align-self: center;
 }
+
 .text {
     width: 50%;
     height: fit-content;
@@ -262,4 +275,127 @@ input {
 
 #tamamo {
     width: 50%;
+}
+
+.name {
+    color: #fa7427;
+    font-size: 150%;
+    text-shadow: 1px 2px #ffcaab;
+}
+
+@media screen and (max-width: 1300px){
+    .harticles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .forty {
+        width: 100%;
+    }
+    .contain {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .menu a {
+        font-size: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+        flex-direction: column-reverse;
+    }
+
+    aside {
+        width: 100%;
+        height: fit-content;
+        border-left: none;
+        border-bottom: 10px solid #d29060;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .menu {
+        margin-top: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .menu a {
+        border-top: none;
+        border-bottom: none;
+        border-left: solid #d29060;
+        border-right: solid #d29060;
+        margin-top: 0;
+    }
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    .imgfit3 {
+        width: 100%;
+    }
+
+    .column {
+        border-right: none;
+        border-bottom: 4px solid #B64D00;
+    }
+
+    #last {
+        border-bottom: none;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    .apie {
+        flex-direction: column;
+    }
+
+    .apie p,
+    select,
+    .text {
+        width: 100%;
+        text-align: center;
+    }
+
+    #tamamo {
+        width: 100%;
+    }
+
+    .forty {
+        align-self: center;
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .menu a {
+        font-size: 11px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .harticles {
+        flex-direction: column;
+    }
+
+    .contain {
+        width: 70%;
+        align-self: center;
+    }
 }
